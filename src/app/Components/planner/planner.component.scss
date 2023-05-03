@@ -2,5 +2,14 @@
     position: relative;
     height: fit-content;    
     width: fit-content;
+ 
     
+    .draw-highlight{
+        position: absolute;
+        display: block;
+        background-color: rgba(0, 255, 255, 0.812);
+        height: 52px;
+        top: 30px;
+        z-index: 3;
+    }
 }

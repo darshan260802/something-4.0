@@ -1,3 +1,9 @@
 <div class="container-planner">
-    <canvas id="canvas" (mousedown)="canvas_mouse_down($event)" ></canvas>
+  <canvas id="canvas" (mousedown)="canvas_mouse_down($event)" (mouseup)="canvas_mouse_up($event)" (mousemove)="canvas_mouse_move($event)" ></canvas>
+  <div
+    class="draw-highlight"
+    *ngIf="drawParams.x !== null && drawParams.y !== null && drawParams.dx !== null"
+    [ngStyle]="{ top: drawParams.y+'px', left: drawParams.x+'px', width: drawParams.dx+'px' }"
+  >
+</div>
 </div>
